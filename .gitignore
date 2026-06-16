@@ -1,2 +1,6 @@
 .settings/
 bin/
+doc/
+client/client.jar
+profile/profile.jar
+tools/jipViewer.jar

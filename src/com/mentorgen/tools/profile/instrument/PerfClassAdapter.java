@@ -37,7 +37,7 @@ import com.mentorgen.tools.profile.Controller;
 /**
  * 
  * @author Andrew Wilcox
- * @see org.objectweb.asm.jip.ClassVisitor
+ * @see org.objectweb.asm.ClassVisitor
  */
 public class PerfClassAdapter extends ClassVisitor {
 	private String className;

@@ -23,7 +23,7 @@
 	<target name="javadoc">
 		<delete dir="${basedir}/doc/javadoc"/>
 		<mkdir dir="${basedir}/doc/javadoc"/>
-		<javadoc packagenames="com.mentorgen.*,com.tivo.*,org.objectweb.asm.jip.*"
+		<javadoc packagenames="com.mentorgen.*,com.tivo.*"
 						sourcepath="${basedir}/src"
 						 destdir="${basedir}/doc/javadoc"
 						 classpath="bin"
@@ -32,6 +32,9 @@
 						 use="true"
 						 windowtitle="Java Interactive Profiler" >
 			<doctitle><![CDATA[<h1>Java Interactive Profiler</h1>]]></doctitle>
+			<classpath>
+				<pathelement location="asm-9.10.1.jar" />
+			</classpath>
 		</javadoc>
 	</target>
 
