@@ -14,7 +14,8 @@
            destdir="${basedir}/bin"
            optimize="on"
 	       includeantruntime="false"
-	       target="1.5">
+	       target="25"
+	       classpath="asm-9.10.1.jar">
 		   <compilerarg  value="-Xlint"/>
 		</javac>
 	</target>
@@ -42,12 +43,16 @@
 		<jar jarfile="${basedir}/client/client.jar"
 			basedir="${basedir}/bin"
 			manifest="${basedir}/src/client-manifest"
-			includes="com/mentorgen/tools/util/**,com/mentorgen/tools/profile/remote/**"/>
+			includes="com/mentorgen/tools/util/**,com/mentorgen/tools/profile/remote/**">
+			<zipgroupfileset dir="." includes="asm-9.10.1.jar" />
+		</jar>
 		
 		<jar jarfile="${basedir}/profile/profile.jar"
 			basedir="${basedir}/bin"
 			manifest="${basedir}/src/manifest"
-			includes="com/mentorgen/tools/profile/**,org/**"/>
+			includes="com/mentorgen/tools/profile/**,org/**">
+			<zipgroupfileset dir="." includes="asm-9.10.1.jar" />
+		</jar>
 		
 		<copy file="${basedir}/src/com/tivo/jipviewer/help.html" todir="${basedir}/bin/com/tivo/jipviewer"/>
 		<jar jarfile="${basedir}/tools/jipViewer.jar"

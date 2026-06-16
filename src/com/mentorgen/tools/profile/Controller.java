@@ -425,6 +425,11 @@ public class Controller {
 			}			
 		}
 		
+		String outputFile = System.getProperty("profile.file");
+		if(outputFile != null) {
+			props.setProperty("file", outputFile);
+		}
+		
 		String profile = getProperty(props,"profiler", DEFAULT_PROFILE);
 		String computeFrame = getProperty(props, "compute-frame", DEFAULT_COMPUTE_FRAME);
 		String remote = getProperty(props, "remote", DEFAULT_REMOVE);

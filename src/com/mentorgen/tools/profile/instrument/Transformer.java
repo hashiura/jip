@@ -32,9 +32,9 @@ import java.lang.instrument.ClassFileTransformer;
 import java.lang.instrument.IllegalClassFormatException;
 import java.security.ProtectionDomain;
 
-import org.objectweb.asm.jip.ClassReader;
-import org.objectweb.asm.jip.ClassVisitor;
-import org.objectweb.asm.jip.ClassWriter;
+import org.objectweb.asm.ClassReader;
+import org.objectweb.asm.ClassVisitor;
+import org.objectweb.asm.ClassWriter;
 
 import com.mentorgen.tools.profile.Controller;
 
