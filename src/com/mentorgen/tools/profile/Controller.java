@@ -357,7 +357,7 @@ ClassLoaderFilter.2=com.mentorgen.tools.profile.instrument.classfilter.StandardC
  */
 public class Controller {
 	
-	private static final String ProfilerVersion="1.4.2 2015-06-03";
+	private static final String ProfilerVersion="1.5.0b 2026-06-22";
 	
 	/*
 	 * Default configuration
@@ -372,7 +372,7 @@ public class Controller {
 	private static final String DEFAULT_FILE="profile.txt";
 	private static final String DEFAULT_OBJECT_ALLOC = "off";
 	private static final String DEFAULT_PROFILER_CLASS = "com.mentorgen.tools.profile.runtime.Profile";
-	private static final String DEFAULT_COMPUTE_FRAME = "no";
+	private static final String DEFAULT_COMPUTE_FRAME = "yes";
 	
 	private static final String ON = "on";
 	
@@ -384,7 +384,7 @@ public class Controller {
 	public static enum TimeResolution { ms, ns };
 	
 	public static boolean _profile;
-	public static boolean _computeFrame=false;
+	public static boolean _computeFrame=true;
 	public static boolean _remote;
 	public static int _port;
 	public static int _threadDepth;
